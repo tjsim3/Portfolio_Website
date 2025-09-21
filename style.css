@@ -8,43 +8,35 @@ body {
 }
 
 /* Navbar */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #0a192f;
-  color: white;
-  padding: 15px 40px;
+nav { position: fixed; top:0; left:0; right:0; background:#0a192f; z-index:1000; }
+
+nav .nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  gap: 20px;
 }
 
-nav h1 {
-  font-size: 1.3rem;
+nav h1 { 
+  margin:0; flex:0 0 auto; 
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap; 
-  justify-content: flex-end; 
-  margin: 0;
-  padding: 0;
+  list-style:none; display:flex; gap:14px; margin:0; padding:0;
+  margin-left:auto; flex:1 1 auto; justify-content:flex-end; flex-wrap:wrap;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
+nav ul li { 
+  flex:0 0 auto; 
 }
 
-nav ul li a:hover {
-  color: #64ffda;
+nav ul li a { 
+  display:inline-block; white-space:nowrap; padding:6px 8px; color:#fff; text-decoration:none; 
 }
+
+@media (max-width:420px){ nav{overflow-x:auto;} }
 
 /* Hero / Intro Section */
 .hero {
