@@ -102,39 +102,45 @@ footer {
   margin-top: 40px;
 }
 
-/* Project grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  padding: 100px 40px 40px; /* top padding so it clears navbar */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .project-card {
   background: white;
   border-radius: 12px;
-  text-align: center;
-  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
   text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: black;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .project-card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
 }
 
 .project-card h2 {
-  font-size: 1.2rem;
-  color: #0a192f;
+  margin: 10px 0 5px;
+  text-align: center;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+.project-card p {
+  margin: 0 10px 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
 }
